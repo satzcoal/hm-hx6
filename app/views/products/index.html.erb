@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>汉铭潮品 - Hx6 - 官方网站</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+  <%= javascript_include_tag params[:controller] + '_' + params[:action], 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'mapper', 'data-turbolinks-track' => true  %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+</head>
+<body>
+<div class="main">
+  <div class="header-menu">
+    <div class="header-menu-bar"></div>
+  </div>
+  <div class="content">
+    <div class="img-div">
+      <img src="/img/product.png" class="mapper" usemap="#product-map"/>
+      <map name="product-map">
+        <% @p_coords.each do |coords| %>
+          <area shape="rect" class="noborder icolor<%= coords.color %> iopacity30" coords="<%= coords.coords %>" href="/products/<%= coords.parent_id %>">
+        <% end %>
+        <area shape="rect" class="noborder icolorffffff iopacity0" coords="309,232,618,464" href="/">
+      </map>
+    </div>
+  </div>
+</div>
+
+<div class="sidebar">
+  <div class="sidebar-logo">
+    <div class="sidebar-logo-left"></div>
+    <div class="sidebar-logo-right">
+      <a href="/products"><span class="sidebar-logo-main">PRODUCT</span><span class="sidebar-logo-sub">产品</span></a>
+    </div>
+  </div>
+  <div class="sidebar-container">
+    <div class="sidebar-container-line">
+    </div>
+    <div class="sidebar-container-left">
+    </div>
+    <div class="sidebar-container-right">
+      <div class="sidebar-title">
+        <a href="/products"><span>FULL EFFECT</span></a>
+      </div>
+      <% @products.each do |p| %>
+        <div class="sidebar-item">
+          <a href="/products/<%= p.id %>">
+            <div class="sidebar-circle">
+            </div>
+            <div class="sidebar-item-word-group">
+              <div class="sidebar-item-up">
+                <span><%= p.en_name %></span>
+              </div>
+              <div class="sidebar-item-down">
+                <span><%= p.name %></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      <% end %>
+      <div class="sidebar-item sidebar-footer">
+        <a href="/">
+          <div class="sidebar-footer-arrow">
+          </div>
+          <div class="sidebar-item-word-group">
+            <span class="sidebar-footer-en">HOME</span>
+            <span class="sidebar-footer-cn">首页</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

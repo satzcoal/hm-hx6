@@ -1,2 +1,113 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>汉铭潮品 - Hx6 - 官方网站</title>
+  <script type="text/javascript" src="/mapper/wz_jsgraphics.js"></script>
+  <script type="text/javascript" src="/mapper/mapper.js"></script>
+  <style type="text/css">
+    body {
+      font-family: "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background-color: black;
+      margin: 0px;
+    }
+
+    .header-logo {
+      margin-left: 8%;
+      margin-top: 75px;
+      float: left;
+      position: absolute;
+      top: 0px;
+      z-index: 9999;
+    }
+
+    .header-menu {
+      float: right;
+      width: 58%;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 9999;
+    }
+
+    .header-menu-bar {
+      height: 9px;
+      background-color: #8FC31F;
+    }
+
+    .header-menu-group {
+      margin-top: 80px;
+      margin-left: 5px;
+    }
+
+    .header-menu-item {
+      float: left;
+      margin-right: 10px;
+      color: white;
+    }
+
+    .text-en {
+      color: #8FC31F;
+    }
+
+    .text-cn {
+    }
+
+    .header-menu-item a {
+      color: white;
+      font-size: 12px;
+      text-decoration: inherit;
+      padding-bottom: 1px;
+    }
+
+    .header-menu-item a:hover {
+      border-bottom: 2px solid #8FC31F;
+    }
+
+    .content {
+      text-align: center;
+      margin-left: 13%;
+      margin-top: 75px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="header-logo">
+  <img src="img/logo.png" style="width: 170px;"/>
+</div>
+<div class="header-menu">
+  <div class="header-menu-bar"></div>
+  <div class="header-menu-group">
+    <div class="header-menu-item">
+      <a href="#"><span class="text-en">HOME</span> <span class="text-cn">首 页</span></a>
+    </div>
+    <div class="header-menu-item">
+      <a href="/products"><span class="text-en">PRODUCT</span> <span class="text-cn">产 品</span></a>
+    </div>
+    <div class="header-menu-item">
+      <a href="#"><span class="text-en">VALIDATION</span> <span class="text-cn">验 证</span></a>
+    </div>
+    <div class="header-menu-item">
+      <a href="/about"><span class="text-en">ABOUT</span> <span class="text-cn">关于我们</span></a>
+    </div>
+    <div class="header-menu-item">
+      <a href="/contact"><span class="text-en">CONTACT</span> <span class="text-cn">联系我们</span></a>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <img src="/img/bg.png" class="mapper" style="width: 950px;" usemap="#bg-map"/>
+  <map name="bg-map">
+    <area shape="poly" class="noborder icolorffffff iopacity50" coords="0,234,234,468,468,234,234,0" href="#1">
+    <area shape="poly" class="noborder icolorffffff iopacity50" coords="468,234,586,352,704,234,586,117" href="#2">
+    <area shape="poly" class="noborder icolorffffff iopacity50" coords="703,234,820,352,938,234,820,118" href="/products">
+    <area shape="poly" class="noborder icolorffffff iopacity50" coords="352,352,468,468,586,352,468,235" href="#4">
+    <area shape="poly" class="noborder icolorffffff iopacity50" coords="586,352,703,469,821,352,703,234" href="/products">
+    <area shape="poly" class="noborder icolorffffff iopacity50" coords="234,468,351,586,469,468,351,351" href="#6">
+    <area shape="poly" class="noborder icolorffffff iopacity50" coords="469,468,586,586,703,469,586,351" href="#7">
+    <area shape="poly" class="noborder icolorffffff iopacity50" coords="351,586,468,703,586,586,469,468" href="#8">
+  </map>
+</div>
+
+</body>
+</html>

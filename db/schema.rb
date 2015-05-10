@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150209085015) do
+ActiveRecord::Schema.define(version: 20150510161043) do
 
   create_table "map_coords", force: true do |t|
     t.string   "coords"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 20150209085015) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "en_name"
+  end
+
+  create_table "verify_items", force: true do |t|
+    t.string   "verifycode"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "verifytime"
   end
 
 end

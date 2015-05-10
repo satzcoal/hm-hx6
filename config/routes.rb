@@ -9,5 +9,7 @@ HmHx6::Application.routes.draw do
   get "products" => 'products#index'
   get "products/:id" => 'products#show'
 
+  get "verify/:id" => 'verify_items#check'
+
   root :to => 'home#index'
 end

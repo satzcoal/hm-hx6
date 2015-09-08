@@ -1,0 +1,1 @@
+(function(){$(document).ready(function(){return function(){return $(".sidebar").addClass("sidebar-show"),$(".sidebar").removeClass("sidebar")}}(this))}).call(this);
